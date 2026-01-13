@@ -5,11 +5,11 @@ import { SKILLS } from "@/lib/constants"
 import { cn } from "@/lib/utils"
 
 const skillCategories = {
-  frontend: { name: "Frontend", color: "from-blue-500 to-cyan-500" },
-  backend: { name: "Backend", color: "from-green-500 to-emerald-500" },
-  database: { name: "Database", color: "from-purple-500 to-violet-500" },
-  tools: { name: "Tools", color: "from-orange-500 to-red-500" },
-  cloud: { name: "Cloud", color: "from-pink-500 to-rose-500" },
+  frontend: { name: "Frontend", color: "from-primary to-primary/80" },
+  backend: { name: "Backend", color: "from-accent to-accent/80" },
+  database: { name: "Database", color: "from-primary/70 to-accent/70" },
+  tools: { name: "Tools", color: "from-accent/80 to-primary/60" },
+  cloud: { name: "Cloud", color: "from-primary/60 to-accent/60" },
 }
 
 export function Skills() {
@@ -30,11 +30,10 @@ export function Skills() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
-        >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+        >          <h2 className="heading-section text-3xl sm:text-4xl mb-6">
             Skills & <span className="gradient-text">Technologies</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
             I work with modern technologies to build scalable and performant applications
           </p>
         </motion.div>
@@ -47,14 +46,14 @@ export function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-              className="glass rounded-lg p-6"
+              className="elevated rounded-lg p-6 hover-glow"
             >
               <div className="flex items-center mb-6">
                 <div className={cn(
                   "w-3 h-3 rounded-full bg-gradient-to-r mr-3",
                   skillCategories[category as keyof typeof skillCategories]?.color
                 )} />
-                <h3 className="text-xl font-semibold">
+                <h3 className="heading-section text-xl">
                   {skillCategories[category as keyof typeof skillCategories]?.name}
                 </h3>
               </div>

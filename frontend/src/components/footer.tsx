@@ -1,4 +1,3 @@
-import Link from "next/link"
 import { Github, Linkedin, Mail } from "lucide-react"
 import { SOCIAL_LINKS, PERSONAL_INFO } from "@/lib/constants"
 
@@ -19,7 +18,7 @@ export function Footer() {
           </div>
           
           <div className="flex items-center space-x-4">
-            <Link
+            <a
               href={SOCIAL_LINKS.github}
               className="text-muted-foreground transition-colors hover:text-foreground"
               target="_blank"
@@ -27,8 +26,8 @@ export function Footer() {
             >
               <Github className="h-5 w-5" />
               <span className="sr-only">GitHub</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href={SOCIAL_LINKS.linkedin}
               className="text-muted-foreground transition-colors hover:text-foreground"
               target="_blank"
@@ -36,14 +35,14 @@ export function Footer() {
             >
               <Linkedin className="h-5 w-5" />
               <span className="sr-only">LinkedIn</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href={`mailto:${SOCIAL_LINKS.email}`}
               className="text-muted-foreground transition-colors hover:text-foreground"
             >
               <Mail className="h-5 w-5" />
               <span className="sr-only">Email</span>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

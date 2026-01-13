@@ -51,7 +51,7 @@ export function AboutHero() {
                 <Calendar className="h-5 w-5 text-primary" />
                 <div>
                   <div className="font-medium">Experience</div>
-                  <div className="text-sm text-muted-foreground">5+ Years</div>
+                  <div className="text-sm text-muted-foreground">4+ Years</div>
                 </div>
               </div>
               
@@ -81,11 +81,11 @@ export function AboutHero() {
           >
             <div className="relative aspect-square max-w-md mx-auto">
               {/* Background gradient */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-2xl blur-3xl" />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/8 rounded-2xl blur-3xl" />
               
               {/* Profile image placeholder - replace with actual image */}
               <div className="relative glass rounded-2xl overflow-hidden aspect-square">
-                <div className="w-full h-full bg-gradient-to-br from-blue-500/10 to-purple-600/10 flex items-center justify-center">
+                <div className="w-full h-full bg-gradient-to-br from-primary/5 to-accent/8 flex items-center justify-center">
                   <div className="text-8xl font-bold text-muted-foreground/20">
                     {PERSONAL_INFO.name.charAt(0)}
                   </div>
@@ -104,7 +104,7 @@ export function AboutHero() {
               <motion.div
                 animate={{ y: [0, -10, 0], rotate: [0, 5, 0] }}
                 transition={{ duration: 6, repeat: Infinity }}
-                className="absolute -top-4 -right-4 w-16 h-16 bg-blue-500/20 rounded-full backdrop-blur-sm"
+                className="absolute -top-4 -right-4 w-16 h-16 bg-accent/10 rounded-full backdrop-blur-sm"
               />
               <motion.div
                 animate={{ y: [0, 10, 0], rotate: [0, -5, 0] }}

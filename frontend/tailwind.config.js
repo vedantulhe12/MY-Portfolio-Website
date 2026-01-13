@@ -50,6 +50,14 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "warm-accent": {
+          DEFAULT: "hsl(var(--warm-accent))",
+          foreground: "hsl(var(--warm-accent-foreground))",
+        },
+        elevated: {
+          DEFAULT: "hsl(var(--elevated))",
+          subtle: "hsl(var(--elevated-subtle))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -61,11 +69,11 @@ module.exports = {
         mono: ["var(--font-mono)", "Consolas", "monospace"],
       },
       animation: {
-        "fade-in": "fadeIn 0.5s ease-in-out",
-        "slide-up": "slideUp 0.5s ease-out",
-        "slide-down": "slideDown 0.5s ease-out",
-        "scale-in": "scaleIn 0.3s ease-out",
-        "bounce-gentle": "bounceGentle 2s ease-in-out infinite",
+        "fade-in": "fadeIn 0.6s ease-out",
+        "slide-up": "slideUp 0.6s ease-out",
+        "slide-down": "slideDown 0.6s ease-out",
+        "scale-in": "scaleIn 0.4s ease-out",
+        "float-gentle": "floatGentle 4s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -73,20 +81,20 @@ module.exports = {
           "100%": { opacity: "1" },
         },
         slideUp: {
-          "0%": { transform: "translateY(20px)", opacity: "0" },
+          "0%": { transform: "translateY(16px)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
         slideDown: {
-          "0%": { transform: "translateY(-20px)", opacity: "0" },
+          "0%": { transform: "translateY(-16px)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
         scaleIn: {
-          "0%": { transform: "scale(0.9)", opacity: "0" },
+          "0%": { transform: "scale(0.95)", opacity: "0" },
           "100%": { transform: "scale(1)", opacity: "1" },
         },
-        bounceGentle: {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-10px)" },
+        floatGentle: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-4px)" },
         },
       },
     },

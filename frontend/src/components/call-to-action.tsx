@@ -18,7 +18,7 @@ export function CallToAction() {
           className="glass rounded-2xl p-8 sm:p-12 text-center relative overflow-hidden"
         >
           {/* Background gradient */}
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5" />
           
           {/* Content */}
           <div className="relative z-10">
@@ -54,7 +54,7 @@ export function CallToAction() {
               <Button
                 asChild
                 size="lg"
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white group"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground group"
               >
                 <Link href="/contact">
                   <Mail className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
@@ -83,7 +83,7 @@ export function CallToAction() {
 
           {/* Floating elements */}
           <motion.div
-            className="absolute top-4 right-4 w-16 h-16 bg-blue-500/10 rounded-full"
+            className="absolute top-4 right-4 w-16 h-16 bg-accent/5 rounded-full"
             animate={{
               y: [0, -10, 0],
               rotate: [0, 180, 360],

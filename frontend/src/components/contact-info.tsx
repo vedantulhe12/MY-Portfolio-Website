@@ -3,10 +3,17 @@
 import { motion } from "framer-motion"
 import { Mail, MapPin, Clock, MessageSquare } from "lucide-react"
 import { PERSONAL_INFO, SOCIAL_LINKS } from "@/lib/constants"
-import Link from "next/link"
 
 export function ContactInfo() {
-  const contactMethods = [
+  interface ContactMethod {
+    icon: any
+    label: string
+    value: string
+    href?: string
+    description: string
+  }
+
+  const contactMethods: ContactMethod[] = [
     {
       icon: Mail,
       label: "Email",
@@ -75,7 +82,7 @@ export function ContactInfo() {
             )
 
             return method.href ? (
-              <Link 
+              <a 
                 key={method.label}
                 href={method.href} 
                 target={method.href.startsWith('http') ? "_blank" : undefined}
@@ -83,9 +90,11 @@ export function ContactInfo() {
                 className="block hover:scale-105 transition-transform"
               >
                 {content}
-              </Link>
+              </a>
             ) : (
-              content
+              <div key={method.label}>
+                {content}
+              </div>
             )
           })}
         </div>

@@ -16,9 +16,24 @@ export function GitHubStats() {
         const response = await apiClient.getGitHubStats()
         if (response.success) {
           setStats(response.data)
+        } else {
+          // Set default stats structure if API fails
+          setStats({
+            total_repos: 0,
+            total_stars: 0,
+            total_forks: 0,
+            languages: []
+          })
         }
       } catch (error) {
         console.error('Failed to fetch GitHub stats:', error)
+        // Set default stats structure on error
+        setStats({
+          total_repos: 0,
+          total_stars: 0,
+          total_forks: 0,
+          languages: []
+        })
       } finally {
         setLoading(false)
       }
@@ -43,12 +58,12 @@ export function GitHubStats() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay }}
-      className="glass rounded-lg p-6 text-center hover:shadow-lg transition-all duration-300 hover:scale-105"
+      className="elevated rounded-lg p-6 text-center hover-lift"
     >
-      <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
-        <Icon className="h-6 w-6 text-white" />
+      <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+        <Icon className="h-6 w-6 text-primary" />
       </div>
-      <div className="text-2xl font-bold mb-1">{value}</div>
+      <div className="text-2xl font-bold mb-2">{value}</div>
       <div className="text-sm text-muted-foreground">{label}</div>
     </motion.div>
   )
@@ -62,11 +77,10 @@ export function GitHubStats() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
-        >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+        >          <h2 className="heading-section text-3xl sm:text-4xl mb-6">
             GitHub <span className="gradient-text">Activity</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
             Real-time insights into my development activity and contributions
           </p>
         </motion.div>
@@ -87,30 +101,30 @@ export function GitHubStats() {
               <StatCard 
                 icon={Code} 
                 label="Public Repositories" 
-                value={stats.total_repos}
+                value={stats.total_repos || 0}
                 delay={0.1}
               />
               <StatCard 
                 icon={Star} 
                 label="Total Stars" 
-                value={stats.total_stars}
+                value={stats.total_stars || 0}
                 delay={0.2}
               />
               <StatCard 
                 icon={GitFork} 
                 label="Total Forks" 
-                value={stats.total_forks}
+                value={stats.total_forks || 0}
                 delay={0.3}
               />
               <StatCard 
                 icon={TrendingUp} 
                 label="Languages Used" 
-                value={stats.languages.length}
+                value={stats.languages?.length || 0}
                 delay={0.4}
               />
             </div>
 
-            {stats.languages.length > 0 && (
+            {stats.languages && stats.languages.length > 0 && (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

@@ -65,14 +65,14 @@ export function ContactForm() {
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <form onSubmit={handleSubmit} className="glass rounded-xl p-8 space-y-6">
-        <h2 className="text-2xl font-semibold mb-6">Send Message</h2>
+      <form onSubmit={handleSubmit} className="elevated rounded-xl p-8 space-y-6">
+        <h2 className="heading-section text-2xl mb-6">Send Message</h2>
         
         {submitStatus === 'success' && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="flex items-center space-x-2 p-4 bg-green-500/10 border border-green-500/20 rounded-lg text-green-600"
+            className="flex items-center space-x-2 p-4 bg-warm-accent/10 border border-warm-accent/20 rounded-lg text-warm-accent"
           >
             <CheckCircle className="h-5 w-5" />
             <span>Message sent successfully! I'll get back to you soon.</span>
@@ -83,7 +83,7 @@ export function ContactForm() {
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="flex items-center space-x-2 p-4 bg-red-500/10 border border-red-500/20 rounded-lg text-red-600"
+            className="flex items-center space-x-2 p-4 bg-destructive/10 border border-destructive/20 rounded-lg text-destructive"
           >
             <AlertCircle className="h-5 w-5" />
             <span>{errorMessage}</span>
@@ -103,7 +103,7 @@ export function ContactForm() {
               onChange={handleChange}
               required
               disabled={isSubmitting}
-              className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors disabled:opacity-50"
+              className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-warm-accent/50 focus:border-warm-accent transition-colors disabled:opacity-50"
               placeholder="Your full name"
             />
           </div>
@@ -120,7 +120,7 @@ export function ContactForm() {
               onChange={handleChange}
               required
               disabled={isSubmitting}
-              className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors disabled:opacity-50"
+              className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-warm-accent/50 focus:border-warm-accent transition-colors disabled:opacity-50"
               placeholder="your.email@example.com"
             />
           </div>
@@ -138,7 +138,7 @@ export function ContactForm() {
             onChange={handleChange}
             required
             disabled={isSubmitting}
-            className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors disabled:opacity-50"
+            className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-warm-accent/50 focus:border-warm-accent transition-colors disabled:opacity-50"
             placeholder="What's this about?"
           />
         </div>
@@ -173,7 +173,7 @@ export function ContactForm() {
           type="submit"
           disabled={isSubmitting}
           size="lg"
-          className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white group disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground group disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? (
             <>

@@ -8,7 +8,12 @@ import { Menu, X, Github, Linkedin, Mail } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { SOCIAL_LINKS } from "@/lib/constants"
 
-const navItems = [
+type NavItem = {
+  name: string;
+  href: "/" | "/projects" | "/about" | "/resume" | "/contact";
+}
+
+const navItems: NavItem[] = [
   { name: "Home", href: "/" },
   { name: "Projects", href: "/projects" },
   { name: "About", href: "/about" },
@@ -27,7 +32,7 @@ export function Navigation() {
           <motion.div
             whileHover={{ rotate: 360 }}
             transition={{ duration: 0.5 }}
-            className="h-8 w-8 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600"
+            className="h-8 w-8 rounded-lg bg-primary"
           />
           <span className="hidden font-bold sm:inline-block">
             Vedant Ulhe
@@ -51,7 +56,7 @@ export function Navigation() {
               {pathname === item.href && (
                 <motion.div
                   layoutId="navbar-indicator"
-                  className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-blue-500 to-purple-600"
+                  className="absolute inset-x-0 -bottom-px h-px bg-primary"
                   initial={false}
                   transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
                 />
@@ -62,31 +67,31 @@ export function Navigation() {
 
         {/* Social Links */}
         <div className="hidden items-center space-x-4 md:flex">
-          <Link
+          <a
             href={SOCIAL_LINKS.github}
-            className="text-foreground/60 transition-colors hover:text-foreground"
+            className="text-foreground/60 transition-colors hover:text-warm-accent"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Github className="h-5 w-5" />
             <span className="sr-only">GitHub</span>
-          </Link>
-          <Link
+          </a>
+          <a
             href={SOCIAL_LINKS.linkedin}
-            className="text-foreground/60 transition-colors hover:text-foreground"
+            className="text-foreground/60 transition-colors hover:text-warm-accent"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Linkedin className="h-5 w-5" />
             <span className="sr-only">LinkedIn</span>
-          </Link>
-          <Link
+          </a>
+          <a
             href={`mailto:${SOCIAL_LINKS.email}`}
-            className="text-foreground/60 transition-colors hover:text-foreground"
+            className="text-foreground/60 transition-colors hover:text-warm-accent"
           >
             <Mail className="h-5 w-5" />
             <span className="sr-only">Email</span>
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -123,7 +128,7 @@ export function Navigation() {
                 </Link>
               ))}
               <div className="flex items-center space-x-4 px-3 pt-4">
-                <Link
+                <a
                   href={SOCIAL_LINKS.github}
                   className="text-foreground/60 transition-colors hover:text-foreground"
                   target="_blank"
@@ -131,8 +136,8 @@ export function Navigation() {
                 >
                   <Github className="h-5 w-5" />
                   <span className="sr-only">GitHub</span>
-                </Link>
-                <Link
+                </a>
+                <a
                   href={SOCIAL_LINKS.linkedin}
                   className="text-foreground/60 transition-colors hover:text-foreground"
                   target="_blank"
@@ -140,14 +145,14 @@ export function Navigation() {
                 >
                   <Linkedin className="h-5 w-5" />
                   <span className="sr-only">LinkedIn</span>
-                </Link>
-                <Link
+                </a>
+                <a
                   href={`mailto:${SOCIAL_LINKS.email}`}
                   className="text-foreground/60 transition-colors hover:text-foreground"
                 >
                   <Mail className="h-5 w-5" />
                   <span className="sr-only">Email</span>
-                </Link>
+                </a>
               </div>
             </div>
           </motion.div>

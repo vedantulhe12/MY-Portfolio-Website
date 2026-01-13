@@ -17,11 +17,10 @@ export function FeaturedProjects() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
-        >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+        >          <h2 className="heading-section text-3xl sm:text-4xl mb-6">
             Featured <span className="gradient-text">Projects</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
             Here are some of my recent projects that showcase my skills and experience
           </p>
         </motion.div>
@@ -34,7 +33,7 @@ export function FeaturedProjects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group glass rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300"
+              className="group elevated rounded-lg overflow-hidden hover-lift"
             >
               <div className="relative aspect-video overflow-hidden">
                 {project.image ? (
@@ -45,8 +44,8 @@ export function FeaturedProjects() {
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 ) : (
-                  <div className="w-full h-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
-                    <div className="text-6xl font-bold text-muted-foreground/30">
+                  <div className="w-full h-full bg-gradient-to-br from-primary/5 to-accent/8 flex items-center justify-center">
+                    <div className="text-6xl font-bold text-muted-foreground/20">
                       {project.title.charAt(0)}
                     </div>
                   </div>

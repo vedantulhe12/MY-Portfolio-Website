@@ -14,7 +14,7 @@ export function ResumeViewer() {
       className="glass rounded-xl p-8"
     >
       <div className="text-center">
-        <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-600/20 flex items-center justify-center">
+        <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
           <FileText className="h-12 w-12 text-primary" />
         </div>
         
@@ -29,7 +29,7 @@ export function ResumeViewer() {
           <Button
             asChild
             size="lg"
-            className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white group"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground group"
           >
             <a
               href={PERSONAL_INFO.resumeUrl}

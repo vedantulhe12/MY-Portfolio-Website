@@ -79,29 +79,26 @@ export const EXPERIENCE: Experience[] = [
 export const FEATURED_PROJECTS: Project[] = [
   {
     id: '1',
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce solution with payment processing, inventory management, and admin dashboard.',
-    image: '/projects/ecommerce.jpg',
-    tech: ['Next.js', 'Node.js', 'PostgreSQL', 'Stripe', 'AWS'],
-    github: 'https://github.com/username/ecommerce-platform',
-    demo: 'https://ecommerce-demo.vercel.app',
+    title: 'E-commerce Storefront',
+    description: 'A modern full-stack e-commerce application built using React, TypeScript, and Express.js, featuring secure authentication, product browsing, cart management, checkout flow, and an admin dashboard. The project uses file-based persistent storage for easy development while supporting PostgreSQL for production scalability. It demonstrates clean archite',
+    tech: ['React', 'TypeScript', 'shadcn',"Tailwind CSS", 'Express.js', 'passport.js', 'zod', 'PostgreSQL'],
+    github: 'https://kadeep-technologies-full-stack-intern.onrender.com/products',
+    demo: 'https://kadeep-technologies-full-stack-intern.onrender.com/products',
     featured: true
   },
   {
     id: '2',
-    title: 'Task Management App',
-    description: 'Collaborative task management tool with real-time updates, team workspaces, and advanced filtering.',
-    image: '/projects/taskapp.jpg',
-    tech: ['React', 'Firebase', 'TypeScript', 'Framer Motion'],
-    github: 'https://github.com/username/task-manager',
-    demo: 'https://taskapp-demo.vercel.app',
+    title: 'InternHub',
+    description: 'An AI-based internship matching engine that analyzes student profiles and job descriptions to generate skill gap insights, tailored resumes, and ATS-style confidence scores using Gemini 2.0 Flash.',
+    tech: ['Django', 'Python', 'SQLite', 'OpenAI API'],
+    github: 'https://github.com/vedantulhe12/KaDeep_Technologies_AI_Intern',
+    demo: 'https://kadeeptechnologiesaiintern-production.up.railway.app/docs',
     featured: true
   },
   {
     id: '3',
     title: 'Analytics Dashboard',
     description: 'Data visualization dashboard with real-time metrics, customizable charts, and export functionality.',
-    image: '/projects/analytics.jpg',
     tech: ['Vue.js', 'D3.js', 'Python', 'Django', 'Chart.js'],
     github: 'https://github.com/username/analytics-dashboard',
     demo: 'https://analytics-demo.vercel.app',
@@ -110,16 +107,15 @@ export const FEATURED_PROJECTS: Project[] = [
 ]
 
 export const SOCIAL_LINKS = {
-  github: 'https://github.com/yourusername',
-  linkedin: 'https://linkedin.com/in/yourusername',
-  twitter: 'https://twitter.com/yourusername',
-  email: 'your.email@example.com',
+  github: 'https://github.com/vedantulhe12',
+  linkedin: 'https://www.linkedin.com/in/vedantulhe/',
+  twitter: 'https://twitter.com/vedantulhe',
+  email: 'ulhevedant@gmail.com',
 }
-
 export const PERSONAL_INFO = {
   name: 'Vedant Ulhe',
   title: 'Full-Stack Developer',
-  bio: 'Passionate full-stack developer with 5+ years of experience building modern web applications. I specialize in React, Next.js, Node.js, and Python, with a focus on creating scalable, user-centered solutions.',
-  location: 'San Francisco, CA',
+  bio: 'Passionate full-stack developer with 4+ years of experience building modern web applications. I specialize in React, Next.js, Node.js, and Python, with a focus on creating scalable, user-centered solutions.',
+  location: 'Pune, Maharashtra, India',
   resumeUrl: '/resume.pdf',
 }

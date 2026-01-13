@@ -29,26 +29,26 @@ export function ResumeSummary() {
             </div>
             
             <div className="flex space-x-2 mt-4 sm:mt-0">
-              <Button
-                asChild
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white"
-              >
-                <a
-                  href={PERSONAL_INFO.resumeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Download className="mr-2 h-4 w-4" />
-                  Download PDF
-                </a>
-              </Button>
-              
               <Button variant="outline" asChild>
-                <a href={`mailto:${SOCIAL_LINKS.email}`}>
-                  <Mail className="mr-2 h-4 w-4" />
-                  Contact
-                </a>
-              </Button>
+  <a
+    href={`mailto:${SOCIAL_LINKS.email}?subject=Portfolio%20Inquiry`}
+  >
+    <Mail className="mr-2 h-4 w-4" />
+    Email
+  </a>
+</Button>
+
+<Button variant="ghost" asChild>
+  <a
+    href={`https://mail.google.com/mail/?view=cm&fs=1&to=${SOCIAL_LINKS.email}&su=Portfolio%20Inquiry&body=Hi%20Vedant,%0D%0A%0D%0AI%20came%20across%20your%20portfolio.`}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Open in Gmail
+  </a>
+</Button>
+
+
             </div>
           </div>
           
@@ -123,7 +123,7 @@ export function ResumeSummary() {
       <div className="mt-8 pt-8 border-t border-border">
         <div className="grid gap-4 sm:grid-cols-3 text-center">
           <div>
-            <div className="text-2xl font-bold">5+</div>
+            <div className="text-2xl font-bold">4+</div>
             <div className="text-sm text-muted-foreground">Years Experience</div>
           </div>
           <div>

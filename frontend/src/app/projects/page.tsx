@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 }
 
 export default async function ProjectsPage() {
-  const repositories = await getServerSideRepositories()
+  const repositories = await getServerSideRepositories() || []
 
   return (
     <div className="min-h-screen py-20">

@@ -9,15 +9,18 @@ import { Repository } from "@/types"
 import { formatRelativeTime } from "@/lib/utils"
 
 interface ProjectsGridProps {
-  repositories: Repository[]
+  repositories?: Repository[]
 }
 
 export function ProjectsGrid({ repositories }: ProjectsGridProps) {
   const [filter, setFilter] = useState<'all' | 'popular' | 'recent'>('all')
   const [selectedLanguage, setSelectedLanguage] = useState<string>('all')
 
+  // Ensure repositories is always an array with proper type checking
+  const safeRepositories = Array.isArray(repositories) ? repositories : []
+
   const languages = useMemo(() => {
-    const langs = repositories
+    const langs = safeRepositories
       .map(repo => repo.language)
       .filter(Boolean)
       .reduce((acc, lang) => {
@@ -28,10 +31,10 @@ export function ProjectsGrid({ repositories }: ProjectsGridProps) {
     return Object.entries(langs)
       .sort(([,a], [,b]) => b - a)
       .map(([lang]) => lang)
-  }, [repositories])
+  }, [safeRepositories])
 
   const filteredRepositories = useMemo(() => {
-    let filtered = [...repositories]
+    let filtered = [...safeRepositories]
 
     // Apply language filter
     if (selectedLanguage !== 'all') {
@@ -230,12 +233,12 @@ export function ProjectsGrid({ repositories }: ProjectsGridProps) {
         <h3 className="text-xl font-semibold mb-4 text-center">Project Statistics</h3>
         <div className="grid gap-4 sm:grid-cols-3 text-center">
           <div>
-            <div className="text-2xl font-bold">{repositories.length}</div>
+            <div className="text-2xl font-bold">{safeRepositories.length}</div>
             <div className="text-sm text-muted-foreground">Total Projects</div>
           </div>
           <div>
             <div className="text-2xl font-bold">
-              {repositories.reduce((sum, repo) => sum + repo.stargazers_count, 0)}
+              {safeRepositories.reduce((sum, repo) => sum + repo.stargazers_count, 0)}
             </div>
             <div className="text-sm text-muted-foreground">Total Stars</div>
           </div>

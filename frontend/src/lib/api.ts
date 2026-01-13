@@ -28,6 +28,16 @@ class ApiClient {
       }
 
       const data = await response.json()
+      
+      // Handle backend's wrapped response format
+      if (data.success !== undefined && data.data !== undefined) {
+        return {
+          success: data.success,
+          data: data.data,
+        }
+      }
+      
+      // Handle direct data response
       return {
         success: true,
         data,
@@ -62,11 +72,27 @@ export const apiClient = new ApiClient(API_URL)
 
 // React hooks for API calls
 export async function getServerSideRepositories(): Promise<Repository[]> {
-  const response = await apiClient.getRepositories()
-  return response.success ? response.data : []
+  try {
+    const response = await apiClient.getRepositories()
+    if (response.success && Array.isArray(response.data)) {
+      return response.data
+    }
+    return []
+  } catch (error) {
+    console.error('Error fetching repositories:', error)
+    return []
+  }
 }
 
 export async function getServerSideGitHubStats(): Promise<GitHubStats | null> {
-  const response = await apiClient.getGitHubStats()
-  return response.success ? response.data : null
+  try {
+    const response = await apiClient.getGitHubStats()
+    if (response.success && response.data) {
+      return response.data
+    }
+    return null
+  } catch (error) {
+    console.error('Error fetching GitHub stats:', error)
+    return null
+  }
 }

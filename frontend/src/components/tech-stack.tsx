@@ -7,27 +7,27 @@ import { cn } from "@/lib/utils"
 const categoryInfo = {
   frontend: { 
     name: "Frontend", 
-    color: "from-blue-500 to-cyan-500",
+    color: "from-primary to-primary/80",
     description: "Building beautiful, responsive user interfaces"
   },
   backend: { 
     name: "Backend", 
-    color: "from-green-500 to-emerald-500",
+    color: "from-accent to-accent/80",
     description: "Creating scalable server-side applications"
   },
   database: { 
     name: "Database", 
-    color: "from-purple-500 to-violet-500",
+    color: "from-primary/70 to-accent/70",
     description: "Designing and optimizing data storage solutions"
   },
   tools: { 
     name: "Tools & DevOps", 
-    color: "from-orange-500 to-red-500",
+    color: "from-accent/80 to-primary/60",
     description: "Streamlining development and deployment workflows"
   },
   cloud: { 
     name: "Cloud & Infrastructure", 
-    color: "from-pink-500 to-rose-500",
+    color: "from-primary/60 to-accent/60",
     description: "Deploying and scaling applications in the cloud"
   },
 }
@@ -50,16 +50,15 @@ export function TechStack() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
-        >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+        >          <h2 className="heading-section text-3xl sm:text-4xl mb-6">
             Technology <span className="gradient-text">Stack</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
             The tools and technologies I use to bring ideas to life
           </p>
         </motion.div>
 
-        <div className="space-y-12">
+        <div className="space-y-16">
           {Object.entries(groupedSkills).map(([category, skills], categoryIndex) => {
             const categoryData = categoryInfo[category as keyof typeof categoryInfo]
             
@@ -70,18 +69,18 @@ export function TechStack() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-                className="glass rounded-xl p-8"
+                className="elevated rounded-xl p-8"
               >
-                <div className="flex items-center mb-6">
+                <div className="flex items-center mb-8">
                   <div className={cn(
                     "w-4 h-4 rounded-full bg-gradient-to-r mr-4",
                     categoryData.color
                   )} />
                   <div>
-                    <h3 className="text-2xl font-semibold">
+                    <h3 className="heading-section text-2xl">
                       {categoryData.name}
                     </h3>
-                    <p className="text-muted-foreground">
+                    <p className="text-body text-muted-foreground mt-1">
                       {categoryData.description}
                     </p>
                   </div>

@@ -26,7 +26,7 @@ export function ExperienceTimeline() {
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 hidden md:block" />
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary/60 hidden md:block" />
             
             {EXPERIENCE.map((exp, index) => (
               <motion.div
@@ -38,12 +38,12 @@ export function ExperienceTimeline() {
                 className="relative mb-12 md:mb-16"
               >
                 {/* Timeline dot */}
-                <div className="absolute left-6 top-6 w-4 h-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 border-4 border-background hidden md:block" />
+                <div className="absolute left-6 top-6 w-4 h-4 rounded-full bg-warm-accent border-4 border-background hidden md:block" />
                 
-                <div className="md:ml-16 glass rounded-lg p-6 hover:shadow-lg transition-all duration-300">
+                <div className="md:ml-16 elevated rounded-lg p-6 hover-glow">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                     <div>
-                      <h3 className="text-xl font-semibold mb-1">{exp.title}</h3>
+                      <h3 className="heading-section text-xl mb-2">{exp.title}</h3>
                       <div className="flex items-center text-primary font-medium mb-2">
                         <Building2 className="h-4 w-4 mr-2" />
                         {exp.company}
