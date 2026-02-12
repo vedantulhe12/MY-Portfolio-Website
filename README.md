@@ -98,14 +98,15 @@ CORS_ALLOWED_ORIGINS=http://localhost:3000
 ## 📦 Deployment
 
 ### Frontend (Vercel)
-- Connect GitHub repository
-- Set environment variables
-- Deploy automatically
+- Connected to GitHub repository
+- Root directory set to `frontend`
+- Environment variables configured
+- Automatic deployments on push to `main`
 
 ### Backend (Railway/Render)
-- Connect GitHub repository
-- Add environment variables
-- Deploy with automatic builds
+- Connected to GitHub repository
+- Production environment variables configured
+- Automatic builds and deployments enabled
 
 ## 🎯 Portfolio Highlights
 
@@ -117,5 +118,3 @@ This portfolio demonstrates:
 - **Professional Design**: Recruiter-focused, clean aesthetic
 
 ---
-
-Built with ❤️ for modern web development
