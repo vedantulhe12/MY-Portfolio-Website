@@ -95,7 +95,7 @@ export function AboutHero() {
                   src="/profile-photo.jpg"
                   alt={PERSONAL_INFO.name}
                   fill
-                  className="object-cover"
+                  className="object-cover object-[center_35%]"
                   priority
                 /> }
               </div>
