@@ -58,7 +58,7 @@ export const SKILLS: Skill[] = [
     id: '2',
     title: 'AI/ML Developer',
     company: 'Accenture',
-    location: 'India',
+    location: 'Pune, India',
     period: '2025 - Jan 2026',
     description: [
       'Developed MedScan – an AI-powered prescription recognition system using OCR and NLP techniques',
@@ -80,7 +80,7 @@ export const SKILLS: Skill[] = [
     id: '3',
     title: 'Backend Developer',
     company: 'Wipro',
-    location: 'India',
+    location: 'Pune, India',
     period: '2022 - 2023',
     description: [
       'Developed and maintained scalable REST APIs for enterprise-level applications',
