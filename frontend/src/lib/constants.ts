@@ -82,7 +82,7 @@ export const FEATURED_PROJECTS: Project[] = [
     title: 'E-commerce Storefront',
     description: 'A modern full-stack e-commerce application built using React, TypeScript, and Express.js, featuring secure authentication, product browsing, cart management, checkout flow, and an admin dashboard. The project uses file-based persistent storage for easy development while supporting PostgreSQL for production scalability. It demonstrates clean archite',
     tech: ['React', 'TypeScript', 'shadcn',"Tailwind CSS", 'Express.js', 'passport.js', 'zod', 'PostgreSQL'],
-    github: 'https://kadeep-technologies-full-stack-intern.onrender.com/products',
+    github: 'https://github.com/vedantulhe12/KaDeep-Technologies-Full-Stack-Intern',
     demo: 'https://kadeep-technologies-full-stack-intern.onrender.com/products',
     featured: true
   },
@@ -93,15 +93,6 @@ export const FEATURED_PROJECTS: Project[] = [
     tech: ['Django', 'Python', 'SQLite', 'OpenAI API'],
     github: 'https://github.com/vedantulhe12/KaDeep_Technologies_AI_Intern',
     demo: 'https://kadeeptechnologiesaiintern-production.up.railway.app/docs',
-    featured: true
-  },
-  {
-    id: '3',
-    title: 'Analytics Dashboard',
-    description: 'Data visualization dashboard with real-time metrics, customizable charts, and export functionality.',
-    tech: ['Vue.js', 'D3.js', 'Python', 'Django', 'Chart.js'],
-    github: 'https://github.com/username/analytics-dashboard',
-    demo: 'https://analytics-demo.vercel.app',
     featured: true
   }
 ]
