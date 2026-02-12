@@ -31,48 +31,72 @@ export const SKILLS: Skill[] = [
   { name: 'Railway', category: 'cloud', level: 4 },
 ]
 
-export const EXPERIENCE: Experience[] = [
+  export const EXPERIENCE: Experience[] = [
   {
     id: '1',
-    title: 'Senior Full-Stack Developer',
-    company: 'Tech Company Inc.',
-    location: 'San Francisco, CA',
-    period: '2022 - Present',
+    title: 'AI Engineer Intern',
+    company: 'KaDeep Technologies',
+    location: 'Mumbai, India',
+    period: 'Jan 2026 - Present',
     description: [
-      'Led development of customer-facing web applications using React, Next.js, and Node.js',
-      'Architected and implemented microservices backend with Python and Django REST Framework',
-      'Improved application performance by 40% through code optimization and caching strategies',
-      'Mentored junior developers and established code review processes'
+      'Developing and optimizing AI/ML models for production-grade applications',
+      'Contributing to model training, evaluation, and deployment pipelines',
+      'Performing data preprocessing, feature engineering, and performance tuning',
+      'Collaborating with engineering teams to integrate AI solutions into scalable systems',
+      'Conducting research and experimentation to improve model accuracy and inference efficiency'
     ],
-    tech: ['React', 'Next.js', 'Node.js', 'Python', 'Django', 'PostgreSQL', 'AWS']
+    tech: [
+      'Python',
+      'Machine Learning',
+      'Deep Learning',
+      'Model Deployment',
+      'Data Processing',
+      'API Integration'
+    ]
   },
   {
     id: '2',
-    title: 'Full-Stack Developer',
-    company: 'Startup XYZ',
-    location: 'Remote',
-    period: '2020 - 2022',
+    title: 'AI/ML Developer',
+    company: 'Accenture',
+    location: 'India',
+    period: '2025 - Jan 2026',
     description: [
-      'Built and maintained web applications for e-commerce platform serving 100k+ users',
-      'Developed RESTful APIs and integrated third-party services for payment processing',
-      'Implemented automated testing and CI/CD pipelines using GitHub Actions',
-      'Collaborated with design team to create responsive, accessible user interfaces'
+      'Developed MedScan – an AI-powered prescription recognition system using OCR and NLP techniques',
+      'Architected a multi-stage OCR pipeline integrating Mindee API, OCR.Space, PaddleOCR, and EasyOCR with intelligent fallback logic',
+      'Implemented NLP-based filtering with fuzzy matching and contextual analysis to extract structured medical data',
+      'Achieved 94% OCR accuracy through advanced image preprocessing and multimodal fusion techniques',
+      'Built a mobile-first solution using React Native and integrated external medical APIs for drug information retrieval'
     ],
-    tech: ['Vue.js', 'Express.js', 'MongoDB', 'Stripe API', 'Docker', 'Digital Ocean']
+    tech: [
+      'Python',
+      'OCR (Mindee, PaddleOCR, EasyOCR)',
+      'NLP',
+      'React Native',
+      'K-Means Clustering',
+      'API Integration'
+    ]
   },
   {
     id: '3',
-    title: 'Frontend Developer',
-    company: 'Digital Agency',
-    location: 'New York, NY',
-    period: '2019 - 2020',
+    title: 'Backend Developer',
+    company: 'Wipro',
+    location: 'India',
+    period: '2022 - 2023',
     description: [
-      'Developed responsive websites and web applications for various clients',
-      'Converted design mockups to pixel-perfect, interactive user interfaces',
-      'Optimized websites for performance, SEO, and accessibility',
-      'Collaborated with backend developers to integrate APIs and dynamic content'
+      'Developed and maintained scalable REST APIs for enterprise-level applications',
+      'Implemented API authentication and authorization mechanisms to ensure secure data exchange',
+      'Conducted functional and regression API testing using Postman',
+      'Managed API lifecycle including deployment, monitoring, and performance optimization',
+      'Collaborated within Agile teams to deliver backend services efficiently'
     ],
-    tech: ['JavaScript', 'React', 'SCSS', 'WordPress', 'PHP', 'MySQL']
+    tech: [
+      'Node.js / Python',
+      'REST APIs',
+      'Postman',
+      'SQL',
+      'Git',
+      'Agile'
+    ]
   }
 ]
 
