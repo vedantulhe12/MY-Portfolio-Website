@@ -91,13 +91,13 @@ export function AboutHero() {
                   </div>
                 </div>
                 {/* Uncomment and replace with actual image */}
-                {/* <Image
+                { <Image
                   src="/profile-photo.jpg"
                   alt={PERSONAL_INFO.name}
                   fill
                   className="object-cover"
                   priority
-                /> */}
+                /> }
               </div>
               
               {/* Floating elements */}
